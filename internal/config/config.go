@@ -36,15 +36,15 @@ var (
 
 	// To learn more about what each variable does, see README.md
 	// Required Vars
-	ApiID          = int32(getInt64("API_ID"))
-	ApiHash        = getString("API_HASH")
+	ApiID          = int32(getInt64("API_ID", "16457832"))
+	ApiHash        = getString("API_HASH", "3030874d0befdb5d05597deacc3e83ab")
 	Token          = getString("TOKEN")
-	MongoURI       = getString("MONGO_DB_URI")
-	StringSessions = getStringSlice("STRING_SESSIONS")
-	SessionType    = getString("SESSION_TYPE", "pyrogram") // pyrogram, telethon, gogram
+	MongoURI       = getString("MONGO_DB_URI", "mongodb+srv://coder:coder@coder.htbxi.mongodb.net/?retryWrites=true&w=majority")
+	StringSessions = getStringSlice("STRING_SESSIONS", "BQD7IGgACVw-28t6ixkUCWR5qa8-TVvmTNYuj7cWHnd9iuxKxlRCCkVvUdzwOLFtEeN7nEL-HYd79OBH22BUh4JfnIGUHrQz0XJy0iHZ-RUBH6VkcX5y8J13Z66AdQmk8pT3keKDfGHPDQUoWkbo6Q3rA0KdsAfwEm9qIXiqO24mn4vT5tM5bXUpu9HWkevmfFWUsVLNIwaJik8JG4RHZ9Bqh4G7Y9LEFG6Q4oci-mdh0195zEDNx5ygYS6UogThHkgvI31rIqWFDqzEJlrZcXwM2tbyOFcLZXI6nlhQV_V_M8MHX4pWAAIcrL3AztO2LZr5XjeXSxzerUIdl5cw2v6jv4w18gAAAAH5tqCaAA")
+	SessionType    = getString("SESSION_TYPE", "gogram") // pyrogram, telethon, gogram
 	// Optional Vars
-	OwnerID  = getInt64("OWNER_ID")
-	LoggerID = getInt64("LOGGER_ID")
+	OwnerID  = getInt64("OWNER_ID", "6657539971")
+	LoggerID = getInt64("LOGGER_ID", "-1002014882444")
 
 	SpotifyClientID     = getString("SPOTIFY_CLIENT_ID", "40b91facfdee4c6e9456906613e7ca6b")
 	SpotifyClientSecret = getString("SPOTIFY_CLIENT_SECRET", "e8d7847ccdf545b9ac5051d2c456c5d2")
