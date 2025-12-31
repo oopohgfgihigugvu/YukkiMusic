@@ -41,7 +41,7 @@ var (
 	Token          = getString("TOKEN")
 	MongoURI       = getString("MONGO_DB_URI")
 	StringSessions = getStringSlice("STRING_SESSIONS")
-	SessionType    = getString("SESSION_TYPE", "gogram") // pyrogram, telethon, gogram
+	SessionType    = getString("SESSION_TYPE", "pyrogram") // pyrogram, telethon, gogram
 	// Optional Vars
 	OwnerID  = getInt64("OWNER_ID")
 	LoggerID = getInt64("LOGGER_ID")
