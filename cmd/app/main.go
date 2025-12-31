@@ -1,11 +1,4 @@
-func checkFFmpegAndFFprobe() {
-	if _, err := exec.LookPath("ffmpeg"); err != nil {
-		log.Fatal("❌ ffmpeg not found in PATH. Please install ffmpeg")
-	}
-	if _, err := exec.LookPath("ffprobe"); err != nil {
-		log.Fatal("❌ ffprobe not found in PATH. Please install ffmpeg")
-	}
-}
+
 
 
 /*
@@ -54,6 +47,16 @@ import (
 	"main/internal/database"
 	"main/internal/modules"
 )
+
+
+func checkFFmpegAndFFprobe() {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		log.Fatal("❌ ffmpeg not found in PATH. Please install ffmpeg")
+	}
+	if _, err := exec.LookPath("ffprobe"); err != nil {
+		log.Fatal("❌ ffprobe not found in PATH. Please install ffmpeg")
+	}
+}
 
 var l = gologging.GetLogger("Main")
 
