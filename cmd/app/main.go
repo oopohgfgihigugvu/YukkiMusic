@@ -1,3 +1,13 @@
+func checkFFmpegAndFFprobe() {
+	if _, err := exec.LookPath("ffmpeg"); err != nil {
+		log.Fatal("❌ ffmpeg not found in PATH. Please install ffmpeg")
+	}
+	if _, err := exec.LookPath("ffprobe"); err != nil {
+		log.Fatal("❌ ffprobe not found in PATH. Please install ffmpeg")
+	}
+}
+
+
 /*
  * This file is part of YukkiMusic.
  *
@@ -33,7 +43,9 @@ package main
 import "C"
 
 import (
+	"log"
 	"os"
+	"os/exec"
 
 	"github.com/Laky-64/gologging"
 
